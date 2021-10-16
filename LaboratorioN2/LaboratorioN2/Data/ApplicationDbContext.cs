@@ -16,7 +16,12 @@ namespace LaboratorioN2.Data
 
             }
 
-            public DbSet<persona> personas { get; set; }
+            public DbSet<persona> persona { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
         }
+    }
     
 }

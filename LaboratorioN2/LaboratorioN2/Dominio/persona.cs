@@ -13,13 +13,12 @@ namespace LaboratorioN2.Dominio
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdPersona { get; set; }
 
-
         public string NombrePersona { get; set; }
 
         public int EdadPersona { get; set; }
 
         public string DescripcionPersona { get; set; }
 
-        public ICollection<persona> personas { get; set; }
+        //public ICollection<persona> personas { get; set; }
     }
 }
