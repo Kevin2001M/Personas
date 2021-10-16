@@ -16,7 +16,7 @@ namespace LaboratorioN2.Data
 
             }
 
-            public DbSet<persona> Students { get; set; }
+            public DbSet<persona> personas { get; set; }
         }
     
 }
