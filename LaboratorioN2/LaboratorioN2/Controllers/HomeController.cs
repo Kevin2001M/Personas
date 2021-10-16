@@ -25,7 +25,7 @@ namespace LaboratorioN2.Controllers
         public IActionResult Index()
         {
             persona person = new persona();
-            person.NombrePersona = "Eduardo";
+            person.NombrePersona = "Kevin";
             person.EdadPersona = 21;
             person.DescripcionPersona = "estudiante";
 
