@@ -1,43 +1,45 @@
-﻿@*@model LaboratorioN2.Dominio.persona;*@
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿
 
-<table id="mitabla" class="table-striped table-hover">
+<h1>Bienvenido a la Tabla de Vistas</h1>
+
+
+<table id="tablalab" class="table table-dark table-striped">
     <thead>
         <tr>
             <th>
-                Course Id
+                Id persona
             </th>
             <th>
-                Title
+                Nombre
             </th>
             <th>
-                Credits
+                Edad
+            </th>
+            <th>
+                Descripcion
             </th>
         </tr>
     </thead>
 
 </table>
-@*@section scripts{
+@section scripts{
 
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script>
 
         $(document).ready(function () {
 
-            var tabla = $('#mitabla').DataTable({
+            var tabla = $('#tablalab').DataTable({
                 "ajax": {
                     "url": '/Home/GetDatos',
                     "type": "get",
                     "datatype": "json"
                 },
                 "columns": [
-                    { "data": "courseId", "name": "courserId", "autoWidth": true },
-                    { "data": "title", "name": "title", "autoWidth": true },
-                    { "data": "credits", "name": "credits", "autoWidth": true }
+                    { "data": "idPersona", "name": "idPersona", "autoWidth": true },
+                    { "data": "nombrePersona", "name": "nombrePersona", "autoWidth": true },
+                    { "data": "edadPersona", "name": "edadPersona", "autoWidth": true },
+                    { "data": "descripcionPersona", "name": "descripcionPersona", "autoWidth": true }
 
                 ]
 
@@ -46,5 +48,5 @@
         })
     </script>
 
-}*@
+}
 
