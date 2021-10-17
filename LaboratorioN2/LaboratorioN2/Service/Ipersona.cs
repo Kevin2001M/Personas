@@ -11,7 +11,7 @@ namespace LaboratorioN2.Service
 
         void Save(persona E);
 
-        ICollection<persona> listardatos();
+        ICollection<persona> Listardatos();
 
     }
 }

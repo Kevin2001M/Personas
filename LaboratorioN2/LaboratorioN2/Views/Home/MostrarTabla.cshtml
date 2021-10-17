@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "MostrarTabla";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>MostrarTabla</h1>
+
+
+<table id="tablalab" class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>IdPersona</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Descripcion</th>
+        </tr>
+
+    </thead>
+
+</table>
+
+@section scripts{
+
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script>
+
+        $(document).ready(function ()
+        {
+
+            var tabla = $('#tablalab').DataTable ({
+                "ajax": {
+                    "url": '/Home/GetDatos',
+                    "type": "get",
+                    "datatype":"json"
+                },
+                "columns": [
+                    { "data": "idPersona", "name": "idPersona", "autoWidth": true },
+                    { "data": "nombrePersona", "name": "nombrePersona", "autoWidth": true },
+                    { "data": "edadPersona", "name": "edadPeredadPersonasona", "autoWidth": true }
+                    { "data": "descripcionPersona", "name": "descripcionPersona", "autoWidth": true }
+
+                ]
+
+
+            })
+        })
+    </script>
+
+}

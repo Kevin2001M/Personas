@@ -34,6 +34,24 @@ namespace LaboratorioN2.Controllers
             return View();
         }
 
+
+        public IActionResult GetDatos()
+        {
+            //var forJson = ipersona.listardatos();
+
+            //return Json(new { data = forJson });
+
+            var DandoFormatoJson = ipersona.Listardatos();
+
+            return Json(new { data = DandoFormatoJson });
+        }
+
+        public IActionResult MostrarTabla()
+        {
+            return View();
+        }
+
+
         public IActionResult Privacy()
         {
             return View();

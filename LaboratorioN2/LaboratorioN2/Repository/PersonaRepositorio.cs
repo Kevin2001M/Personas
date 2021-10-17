@@ -23,10 +23,9 @@ namespace LaboratorioN2.Repository
             app.SaveChanges();
         }
 
-        public ICollection<persona> listardatos()
+        public ICollection<persona> Listardatos()
         {
-            throw new NotImplementedException();
+            return app.persona.ToList();
         }
-
     }
 }
