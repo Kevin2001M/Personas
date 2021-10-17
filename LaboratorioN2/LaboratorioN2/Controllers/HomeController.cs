@@ -22,14 +22,33 @@ namespace LaboratorioN2.Controllers
             _logger = logger;
         }
 
+        public IActionResult guardado()
+        {
+            return View();
+        }
+
+       [HttpPost]
+        public IActionResult Guardado(persona E)
+        {
+            if (ModelState.IsValid)
+            {
+                ipersona.Save(E);
+                return View();
+            }
+            else
+            {
+                return View("Guardado", E);
+            }
+        }
+
         public IActionResult Index()
         {
-            persona person = new persona();
-            person.NombrePersona = "Kevin";
-            person.EdadPersona = 21;
-            person.DescripcionPersona = "estudiante";
+            //persona person = new persona();
+            //person.NombrePersona = "Kevin";
+            //person.EdadPersona = 21;
+            //person.DescripcionPersona = "estudiante";
 
-            ipersona.Save(person);
+            //ipersona.Save(person);
 
             return View();
         }

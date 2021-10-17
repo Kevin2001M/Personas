@@ -13,10 +13,18 @@ namespace LaboratorioN2.Dominio
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdPersona { get; set; }
 
+        [Display(Name = "Nombre")]
+        [Required(ErrorMessage = "DATO REQUERIDO")]
         public string NombrePersona { get; set; }
 
+
+        [Display(Name = "Edad")]
+        [Required(ErrorMessage = "DATO REQUERIDO")]
+        [Range(18, int.MaxValue, ErrorMessage = "LO SIENTO ERES MENOR DE EDAD")]
         public int EdadPersona { get; set; }
 
+        [Display(Name = "Descripcion")]
+        [Required(ErrorMessage = "DATO REQUERIDO")]
         public string DescripcionPersona { get; set; }
 
         //public ICollection<persona> personas { get; set; }
