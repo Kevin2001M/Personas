@@ -17,14 +17,14 @@
     <script src="https://kit.fontawesome.com/ffd11ebe0f.js" crossorigin="anonymous"></script>
 }
 
-<div class="container-fluid formulario" style="max-width:none;">
+<div class="container-fluid formulario" style="max-width:inherit;">
     @using (Html.BeginForm("Guardado", "Home", FormMethod.Post))
     {
 
 
         @*<h1 class="animate__backInDown">Insertar una persona</h1>*@
         @*<i class="fas fa-save fa-2x"></i>*@
-        <i class="fas fa-save fa-2x"></i><h1>Insertar una persona</h1>
+        <i class="fas fa-save fa-2x"></i><h1 class="animate__animated animate__backInDown">Insertar una persona</h1>
         <br />
 
         <div class="form-group col-md-8">
@@ -47,7 +47,7 @@
             <br />
 
             <br />
-            <input type="submit" class="btn btn-success" value="GUARDAR" />
+            <input type="submit" class="btn btn-success animate__animated animate__backInDown" value="GUARDAR" />
             @*<button type="submit" class="btn btn-danger animate__animated animate__backInDown">GUARDAR</button>*@
         </div>
 
