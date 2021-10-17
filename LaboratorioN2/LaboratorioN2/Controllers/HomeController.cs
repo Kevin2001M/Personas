@@ -43,29 +43,18 @@ namespace LaboratorioN2.Controllers
 
         public IActionResult Index()
         {
-            //persona person = new persona();
-            //person.NombrePersona = "Kevin";
-            //person.EdadPersona = 21;
-            //person.DescripcionPersona = "estudiante";
-
-            //ipersona.Save(person);
-
             return View();
         }
 
 
         public IActionResult GetDatos()
         {
-            //var forJson = ipersona.listardatos();
-
-            //return Json(new { data = forJson });
-
             var DandoFormatoJson = ipersona.Listardatos();
 
             return Json(new { data = DandoFormatoJson });
         }
 
-        public IActionResult MostrarTabla()
+        public IActionResult Listado()
         {
             return View();
         }

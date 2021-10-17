@@ -17,29 +17,32 @@
     <script src="https://kit.fontawesome.com/ffd11ebe0f.js" crossorigin="anonymous"></script>
 }
 
-<div class="container-fluid formulario" style="max-width:inherit;">
+<div class="container-fluid ">
     @using (Html.BeginForm("Guardado", "Home", FormMethod.Post))
     {
-
-
-        @*<h1 class="animate__backInDown">Insertar una persona</h1>*@
-        @*<i class="fas fa-save fa-2x"></i>*@
-        <i class="fas fa-save fa-2x"></i><h1 class="animate__animated animate__backInDown">Insertar una persona</h1>
+        <i class="fas fa-save fa-2x"></i>
+        <h1 class="animate__animated animate__backInDown">Registro</h1>
         <br />
 
-        <div class="form-group col-md-8">
+        <div class="form-group col-md-8 ">
+            <i class="fas fa-user animate__animated animate__backInDown"></i>
             <label class="animate__animated animate__backInDown">Nombre</label>
+
             <br />
             @Html.TextBoxFor(m => m.NombrePersona)
             @Html.ValidationMessageFor(m => m.NombrePersona)
             <br />
 
+            <br />
+            <i class="fas fa-sort-numeric-up animate__animated animate__backInDown"></i>
             <label class="animate__animated animate__backInDown">Edad</label>
             <br />
             @Html.TextBoxFor(m => m.EdadPersona)
             @Html.ValidationMessageFor(m => m.EdadPersona)
             <br />
 
+            <br />
+            <i class="fas fa-file-alt animate__animated animate__backInDown"></i>
             <label class="animate__animated animate__backInDown">Descripcion Persona</label>
             <br />
             @Html.TextBoxFor(m => m.DescripcionPersona)
